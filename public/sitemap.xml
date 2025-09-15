@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Home -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/#about</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- Work Section -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/#work</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/projects</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/#contact</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- Sitemap Page -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/sitemap</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+  <!-- 404 Page (optional, sometimes indexed) -->
+  <url>
+    <loc>https://shaluportfolio.netlify.app/404</loc>
+    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
+  </url>
+
+</urlset>
