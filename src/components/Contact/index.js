@@ -1,10 +1,11 @@
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { DARK, LINKS } from "@/utils/const";
 import { TbFileCv } from "react-icons/tb";
 import { MdOutlineAlternateEmail } from "react-icons/md"
+import { useState } from "react";
 
 const SOCIAL_LINKS = [
   {
@@ -32,6 +33,17 @@ const SOCIAL_LINKS = [
 export default function ContactSection() {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === DARK;
+  const [hearts, setHearts] = useState([]);
+
+  const handleHover = () => {
+    const newHearts = Array.from({ length: 6 }).map((_, i) => ({
+      id: Date.now() + i,
+      left: (Math.random() - 0.5) * 60, // thoda left/right random
+      size: Math.random() * 14 + 12, // random size
+      duration: Math.random() * 1.5 + 1.5, // 1.5–3 sec
+    }));
+    setHearts((prev) => [...prev, ...newHearts]);
+  };
 
   return (
     <section
@@ -93,7 +105,7 @@ export default function ContactSection() {
         >
           Have a project, collaboration, or just want to say hi? Reach out via email or connect on socials.
         </motion.p>
-        
+
         <motion.div
           className="flex gap-6 mt-6 text-2xl text-white z-10"
           initial="hidden"
@@ -219,9 +231,27 @@ export default function ContactSection() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="pt-8 text-sm "
+          className="pt-8 text-sm text-center flex items-center "
         >
-          © Copyright 2023-2025 Shalu❤️
+          © Copyright 2023-2025 Shalu
+          <span onMouseEnter={handleHover} className="relative inline-block text-red-500 text-2xl hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer z-10 ">
+            ❤️{hearts.map((heart) => (
+              <motion.span
+                key={heart.id}
+                initial={{ y: 0, opacity: 1, scale: 1 }}
+                animate={{ y: -80, opacity: 0, scale: 0.8, x: heart.left, }}
+                transition={{ duration: heart.duration, ease: "easeOut" }}
+                className="absolute left-1/2 top-0 "
+                style={{
+                  fontSize: heart.size,
+                  transform: "translateX(-50%)",
+                }}
+              >
+               ❤️
+                {/* <FaHeart className="text-red-500" /> */}
+              </motion.span>
+            ))}
+          </span>
         </motion.p>
       </div>
 

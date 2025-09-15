@@ -14,6 +14,7 @@ import CurlyBorder from "@/components/SVG/curlyBorder";
 const navLinks = [
   { name: "About", href: "#about", id: "about" },
   { name: "Work", href: "#work", id: "work" },
+  // { name: "Skills", href: "#skills", id: "skills" },
   { name: "Projects", href: "/projects", id: "projects" },
   { name: "Contact", href: "#contact", id: "contact" },
 ];

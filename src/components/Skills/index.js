@@ -345,7 +345,6 @@ const skills = [
   { src: <React />, name: "React", link: "https://react.dev/learn" },
   { src: <Redux />, name: "Redux", link: "https://redux.js.org/introduction/getting-started" },
   { src: <NextJs />, name: "Next.js", link: "https://nextjs.org/docs" },
-  { src: <ViteJs />, name: "Vite", link: "https://vitejs.dev/guide/" },
   { src: <Node />, name: "Node.js", link: "https://nodejs.org/en/learn" },
   { src: <Npm />, name: "NPM", link: "https://docs.npmjs.com/" },
   { src: <Bootstrap />, name: "Bootstrap", link: "https://getbootstrap.com/docs/" },
@@ -356,17 +355,18 @@ const skills = [
   { src: <Git />, name: "Git", link: "https://git-scm.com/doc" },
   { src: <GitHub />, name: "GitHub", link: "https://docs.github.com/en" },
   { src: <Gitlab />, name: "GitLab", link: "https://docs.gitlab.com/" },
-  { src: <Google />, name: "Google", link: "https://developers.google.com/" },
-  { src: <Docker />, name: "Docker", link: "https://docs.docker.com/get-started/" },
   { src: <MongoDb />, name: "MongoDB", link: "https://www.mongodb.com/docs/" },
   { src: <Mysql />, name: "MySQL", link: "https://dev.mysql.com/doc/" },
-  { src: <Php />, name: "PHP", link: "https://www.php.net/manual/en/" },
   { src: <Python />, name: "Python", link: "https://docs.python.org/3/" },
-  { src: <Django />, name: "Django", link: "https://docs.djangoproject.com/en/stable/" },
-  { src: <CPlusPlus />, name: "C++", link: "https://cplusplus.com/doc/tutorial/" },
   { src: <Vscode />, name: "VS Code", link: "https://code.visualstudio.com/docs" },
   { src: <Wordpress />, name: "WordPress", link: "https://developer.wordpress.org/" },
   { src: <FrameMotion />, name: "Framer Motion", link: "https://www.framer.com/motion/" },
+  // { src: <ViteJs />, name: "Vite", link: "https://vitejs.dev/guide/" },
+  // { src: <Google />, name: "Google", link: "https://developers.google.com/" },
+  // { src: <Docker />, name: "Docker", link: "https://docs.docker.com/get-started/" },
+  // { src: <Php />, name: "PHP", link: "https://www.php.net/manual/en/" },
+  // { src: <Django />, name: "Django", link: "https://docs.djangoproject.com/en/stable/" },
+  // { src: <CPlusPlus />, name: "C++", link: "https://cplusplus.com/doc/tutorial/" },
 ];
 
 export default function SkillsSection() {
@@ -420,7 +420,7 @@ export default function SkillsSection() {
               <div className="w-16 h-16 mb-2 z-30 drop-shadow-lg">
                 {skill.src}
               </div>
-              <p className="text-sm z-30  font-semibold hover:text-white hover:font-black transition">
+              <p className="text-sm z-30  font-semibold text-white hover:font-black transition">
                 {skill.name}
               </p>
               <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-indigo-500 opacity-0 group-hover:opacity-30 blur-2xl transition duration-500" />

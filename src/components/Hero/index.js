@@ -61,14 +61,25 @@ export default function Hero() {
     <section
       id="hero"
       className={`
-        min-h-screen flex flex-col items-center justify-center md:pt-10 pt-28 px-1 lg:px-8
+        min-h-screen overflow-hidden flex flex-col items-center justify-center lg:pt-10 pt-28 px-1 lg:px-8
         ${resolvedTheme === DARK
           ? "bg-gradient-to-tl from-gray-900 via-gray-800 to-black text-gray-100"
           : "bg-gradient-to-tl from-pink-300 via-purple-600 to-indigo-700 text-gray-900"
         }
       `}
     >
-      <div className="max-w-7xl w-full grid md:grid-cols-2 items-center px-2 lg:p-10 rounded-md">
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+        {stars.map((star, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-white rounded-full"
+            initial={{ x: star.x, y: star.y, opacity: 0 }}
+            animate={{ y: [star.y, star.moveY], opacity: [0, 1, 0] }}
+            transition={{ duration: star.duration, repeat: Infinity }}
+          />
+        ))}
+      </div>
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 items-center px-2 lg:p-10 rounded-md overflow-hidden ">
         <div className="text-left space-y-2 lg:space-y-6">
           <h1 className={`${resolvedTheme === "dark" ? "text-white" : "text-white "} text-lg md:text-4xl font-extrabold drop-shadow-lg flex flex-wrap relative z-10`}>
             {text.split("").map((char, i) => (
@@ -86,7 +97,7 @@ export default function Hero() {
             ))}
           </h1>
 
-          <motion.p
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -107,7 +118,7 @@ export default function Hero() {
               deleteSpeed={50}
               delaySpeed={1200}
             />
-          </motion.p>
+          </motion.h2>
 
           <div className="max-w-xl text-base sm:text-lg font-medium text-white/90 z-10 flex flex-wrap">
             {"Passionate about building beautiful, user-friendly interfaces and bringing designs to life with clean, scalable code. I thrive on crafting modern web experiences that connect with users."
@@ -182,45 +193,6 @@ export default function Hero() {
               })}
             </motion.a>
           </motion.div>
-
-          {/* <motion.div
-            className="flex gap-6  text-2xl text-white z-10"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.2, delayChildren: 2.5 },
-              },
-            }}
-          >
-            <motion.a
-              href="https://gitlab.com/shalugole"
-              target="_blank"
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              whileHover={{ scale: 1.5, color: "#fbbf24" }}
-            >
-              <FaGithub />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/shalugole369"
-              target="_blank"
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              whileHover={{ scale: 1.5, color: "#0ea5e9" }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="mailto:shalugole369@gmail.com"
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              whileHover={{ scale: 1.5, color: "#ef4444" }}
-            >
-              <FaEnvelope />
-            </motion.a>
-          </motion.div> */}
-
           <motion.div
             className="flex gap-6 mt-6 text-2xl text-white z-10"
             initial="hidden"
@@ -253,7 +225,7 @@ export default function Hero() {
           <Girl />
         </div>
 
-        <div className="lg:block hidden " >
+        {/* <div className="xl:block hidden " >
           {stars.map((star, i) => (
             <motion.div
               key={i}
@@ -263,7 +235,7 @@ export default function Hero() {
               transition={{ duration: star.duration, repeat: Infinity }}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

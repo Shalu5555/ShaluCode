@@ -115,7 +115,7 @@ export default function AboutMe() {
             delaySpeed={1500}
           />
         </h2>
-        <p className="text-sm md:text-base lg:text-lg text-gray-300 font-medium max-w-3xl mx-auto break-words">
+        <p className="text-sm md:text-base text-gray-300 font-semibold max-w-6xl mx-auto break-words">
           Passionate Frontend Engineer with a strong focus on building interactive,
           high-performance, and visually stunning user experiences. I craft scalable,
           responsive web & mobile apps using React / Next.js / React Native and the MERN

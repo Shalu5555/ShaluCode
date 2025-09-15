@@ -1,6 +1,7 @@
 import { FaBriefcase } from "react-icons/fa";
 
 export const DARK = "dark";
+export const WEBSITE_URL = "https://shaluuu-portfolio.netlify.app";
 
 export const LINKS = {
   INSTA: "https://www.instagram.com/shaluuuuuuuuuuu1114/",
@@ -8,6 +9,7 @@ export const LINKS = {
   GITLAB: "https://gitlab.com/shalugole",
   EMAIL: "mailto:shalugole369@gmail.com",
   LINKEDIN: "https://www.linkedin.com/in/shalugole369",
+
 };
 
 export const EXPERIENCES = [

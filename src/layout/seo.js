@@ -1,4 +1,5 @@
 
+import { LINKS, WEBSITE_URL } from "@/utils/const";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
@@ -12,7 +13,7 @@ const Seo = ({
   type = "website",
 }) => {
   const router = useRouter();
-  const url = `https://shaluportfolio.netlify.app${router.asPath}`;
+  const url =router.asPath;
 
   return (
     <Head>
@@ -41,13 +42,13 @@ const Seo = ({
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Shalu Gole",
-            url: "https://shaluportfolio.netlify.app",
+            url: WEBSITE_URL,
             sameAs: [
-              "https://www.linkedin.com/in/shalugole369",
-              "https://github.com/shalugole",
+              LINKS.LINKEDIN,
+              LINKS.GITLAB,
             ],
             jobTitle: "Frontend Developer",
-            image: "https://shaluportfolio.netlify.app/me.png",
+            image: WEBSITE_URL,
             description: description,
           }),
         }}
