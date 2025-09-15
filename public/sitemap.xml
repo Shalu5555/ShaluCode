@@ -4,47 +4,34 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-  <!-- Home -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
 
-  <!-- About Section -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/#about</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
+<url>
+  <loc>https://shaluuu-portfolio.netlify.app/#hero</loc>
+  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://shaluuu-portfolio.netlify.app/</loc>
+  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shaluuu-portfolio.netlify.app/projects</loc>
+  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shaluuu-portfolio.netlify.app/ShaluGole_CV.pdf</loc>
+  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shaluuu-portfolio.netlify.app/assets/cv/ShaluGole_CV.pdf</loc>
+  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
-  <!-- Work Section -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/#work</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
-
-  <!-- Projects Page -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/projects</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/#contact</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
-
-  <!-- Sitemap Page -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/sitemap</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
-
-  <!-- 404 Page (optional, sometimes indexed) -->
-  <url>
-    <loc>https://shaluportfolio.netlify.app/404</loc>
-    <lastmod>2025-09-13T15:01:06+00:00</lastmod>
-  </url>
 
 </urlset>

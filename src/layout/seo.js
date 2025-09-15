@@ -13,7 +13,7 @@ const Seo = ({
   type = "website",
 }) => {
   const router = useRouter();
-  const url =router.asPath;
+  const url =`${WEBSITE_URL}${router.asPath}`;
 
   return (
     <Head>
