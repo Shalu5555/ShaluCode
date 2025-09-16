@@ -63,13 +63,13 @@ const Header = () => {
             setActiveSection(newSection);
 
             // Update URL hash without reloading the page
-            if (router.pathname === "/") {
-              window.history.replaceState(
-                null,
-                "",
-                `/#${newSection}`
-              );
-            }
+            // if (router.pathname === "/") {
+            //   window.history.replaceState(
+            //     null,
+            //     "",
+            //     `/#${newSection}`
+            //   );
+            // }
           }
         });
       },
