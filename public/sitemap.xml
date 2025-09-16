@@ -13,25 +13,16 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://shaluuu-portfolio.netlify.app/</loc>
-  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://shaluuu-portfolio.netlify.app/projects</loc>
   <lastmod>2025-09-15T19:41:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://shaluuu-portfolio.netlify.app/ShaluGole_CV.pdf</loc>
+  <loc>https://shaluuu-portfolio.netlify.app/resume-preview</loc>
   <lastmod>2025-09-15T19:41:39+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://shaluuu-portfolio.netlify.app/assets/cv/ShaluGole_CV.pdf</loc>
-  <lastmod>2025-09-15T19:41:39+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+
 
 
 </urlset>
