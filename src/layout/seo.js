@@ -18,6 +18,7 @@ const Seo = ({
   return (
     <Head>
       <title>{title}</title>
+      <meta name="google-site-verification" content="VPV5nsaX4vEPt3OS8MAuyC5OD6WKrQ0Ckl3mn2riATA" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
