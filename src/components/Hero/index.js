@@ -7,7 +7,8 @@ import { useTheme } from "next-themes";
 import { DARK, LINKS } from "@/utils/const";
 import { useEffect, useState } from "react";
 
-const text = "Hi, I’m Shalu Gole";
+const text = "Hi, I’m Shalu Gole | Welcome to Shalu Portfolio";
+
 const letterVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({
@@ -105,7 +106,7 @@ export default function Hero() {
           >
             <Typewriter
               words={[
-                "Frontend Developer",
+                "Shalu Portfolio – Frontend Developer",
                 "MERN Stack Engineer",
                 "Mobile App Developer",
                 "Creative Coder",

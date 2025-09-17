@@ -22,7 +22,7 @@ const Girl = () => {
     const [eyePos, setEyePos] = useState({ x: 0, y: 0 });
     const [mouthOpen, setMouthOpen] = useState(false);
     const [blinking, setBlinking] = useState(false);
-    const messages = ["Hi there 👋", "How can I help❓", "Welcome to my portfolio❤️"];
+    const messages = ["Hi there 👋", "How can I help❓", "Welcome to My portfolio❤️"];
     const [activeMsg, setActiveMsg] = useState(0);
     const [showBubble, setShowBubble] = useState(false);
 
