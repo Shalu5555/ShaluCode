@@ -7,7 +7,7 @@ import Script from "next/script";
 const Seo = ({
   title = "Shalu Gole Portfolio | Frontend Developer",
   description = "Frontend Developer Portfolio of Shalu Gole. Check out projects, skills, and work experience.",
-  keywords = "Shalu Gole, Portfolio, Frontend Developer, React, Next.js, GSAP, Framer Motion",
+  keywords = "Shalu Portfolio, Shalu Gole, Frontend Developer, React, Next.js, GSAP, Framer Motion",
   image = "/og-image.png",
   author = "Shalu Gole",
   type = "website",
@@ -43,12 +43,13 @@ const Seo = ({
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Shalu Gole",
+            alternateName: "Shalu Portfolio",
             url: WEBSITE_URL,
             sameAs: [
               LINKS.LINKEDIN,
               LINKS.GITLAB,
             ],
-            jobTitle: "Frontend Developer",
+            jobTitle: "Senior Software Engineer",
             image: WEBSITE_URL,
             description: description,
           }),
@@ -68,6 +69,7 @@ const Seo = ({
           gtag('config', 'G-P4H7QLYK00');
         `}
       </Script>
+
     </Head>
   );
 };

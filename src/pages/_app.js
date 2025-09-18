@@ -4,11 +4,27 @@ import "@/styles/globals.css";
 import Cursor from "@/layout/cursor";
 import Seo from "@/layout/seo";
 import Script from "next/script";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const DownloadCVButton = dynamic(() => import("@/layout/download"));
 const Header = dynamic(() => import("@/layout/header"));
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag("config", "G-P4H7QLYK00", {
+        page_path: url,
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       {/* Google tag (gtag.js) */}

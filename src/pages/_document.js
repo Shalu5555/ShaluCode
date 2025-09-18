@@ -1,3 +1,4 @@
+import { LINKS, WEBSITE_URL } from "@/utils/const";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -53,6 +54,27 @@ export default function Document() {
                 "target": "https://shaluuu-portfolio.netlify.app/projects?search={query}",
                 "query-input": "required name=query"
               }
+            }),
+          }}
+        />
+
+        <Script
+          id="person-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Shalu Gole",
+              "alternateName": "Shaluuu",
+              "url": WEBSITE_URL,
+              "sameAs": [
+                LINKS.LINKEDIN,
+                LINKS.GITLAB,
+                LINKS.INSTA
+              ],
+              "jobTitle": "Full Stack Developer",
             }),
           }}
         />
