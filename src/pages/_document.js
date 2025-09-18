@@ -5,15 +5,13 @@ export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head>
+        {/* Google Fonts */}
         <link
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        {/* <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" /> */}
 
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -21,20 +19,28 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Google Analytics */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX" />
         <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-P4H7QLYK00"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX');
-    `,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-P4H7QLYK00', {
+                page_path: window.location.pathname,
+              });
+            `,
           }}
         />
 
         {/* JSON-LD Structured Data */}
         <Script
+          id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
