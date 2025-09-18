@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import { DARK, LINKS } from "@/utils/const";
 import { useEffect, useState } from "react";
 
-const text = "Hi, I’m Shalu Gole | Welcome to Shalu Portfolio";
+const text = "Welcome to Shalu Portfolio";
 
 const letterVariants = {
   hidden: { opacity: 0, y: 50 },
