@@ -2,7 +2,7 @@
 const CurlyBorder = () => {
 
     return (
-        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[100%] h-[10px]">
+        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[100%] h-4 ">
             <svg
                 viewBox="0 0 200 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@ const CurlyBorder = () => {
                 <path
                     d="M5 15 Q 25 5, 45 15 T 85 15 T 125 15 T 165 15 T 195 15 "
                     stroke="url(#grad1)"
-                    strokeWidth="20"
+                    strokeWidth="16"
                     fill="transparent"
                     strokeLinecap="round"
                 />

@@ -4,17 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-import { FaSun, FaMoon } from "react-icons/fa";
 import Logo from "@/components/Logo";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { MdSunny } from "react-icons/md";
 import { FiMenu, FiX } from "react-icons/fi";
 import CurlyBorder from "@/components/SVG/curlyBorder";
+import DayNightToggle from "./dayNightToggle";
 
 const navLinks = [
   { name: "About", href: "#about", id: "about" },
   { name: "Work", href: "#work", id: "work" },
-  // { name: "Skills", href: "#skills", id: "skills" },
   { name: "Projects", href: "/projects", id: "projects" },
   { name: "Contact", href: "#contact", id: "contact" },
 ];
@@ -58,18 +57,7 @@ const Header = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const newSection = entry.target.id.toLowerCase();
-
-            // Update active section state
             setActiveSection(newSection);
-
-            // Update URL hash without reloading the page
-            // if (router.pathname === "/") {
-            //   window.history.replaceState(
-            //     null,
-            //     "",
-            //     `/#${newSection}`
-            //   );
-            // }
           }
         });
       },
@@ -88,7 +76,6 @@ const Header = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
-
   const handleNavClick = (e, link) => {
     if (link.href.startsWith("#")) {
       e.preventDefault();
@@ -100,12 +87,13 @@ const Header = () => {
       } else {
         router.push(`/#${sectionId}`);
       }
-      setIsDrawerOpen(false);
+    } else {
+      router.push(link.href);
     }
+    setIsDrawerOpen(false);
   };
-  const isDark = resolvedTheme === "dark";
 
-  // If not mounted yet, don't render theme-dependent UI (prevents flicker/hydration mismatch)
+  const isDark = resolvedTheme === "dark";
   if (!mounted) { }
 
   return (
@@ -121,7 +109,7 @@ const Header = () => {
           <Logo />
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-lg font-medium relative">
-          <div className="flex space-x-8">
+          <div className="flex space-x-8 ">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -129,17 +117,18 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link)}
-                  className={`cursor-pointer relative transition-colors ${isActive ? "font-bold bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 bg-clip-text text-transparent" : " text-white"}`}
+                  className={`cursor-pointer relative transition-colors ${isActive ? " font-bold bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 bg-clip-text text-transparent" : " text-white"}`}
                 >
                   {link.name}
-
                   {isActive && (<CurlyBorder />)}
                 </Link>
               );
             })}
           </div>
 
-          <div
+          <DayNightToggle />
+
+          {/* <div
             className="relative w-16 h-8 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer flex items-center p-1"
             onClick={() => setTheme(isDark ? "light" : "dark")}
           >
@@ -155,11 +144,11 @@ const Header = () => {
                 <MdSunny className="text-yellow-400 w-5 h-5" />
               )}
             </motion.div>
-          </div>
+          </div> */}
         </nav>
 
         <div className="flex items-center space-x-2 md:hidden">
-          <div
+          {/* <div
             className="relative w-13 h-7 rounded-full bg-gray-300 dark:bg-gray-700 cursor-pointer flex items-center p-1"
             onClick={() => setTheme(isDark ? "light" : "dark")}
           >
@@ -175,7 +164,9 @@ const Header = () => {
                 <MdSunny className="text-yellow-400 w-4 h-4" />
               )}
             </motion.div>
-          </div>
+          </div> */}
+
+          <DayNightToggle />
 
           {/* Drawer Toggle */}
           <button
@@ -216,9 +207,7 @@ const Header = () => {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link)}
                 className={`text-lg border-b-2 w-full ${activeSection === link.id
-                  ? "font-bold text-pink-500"
-                  : "text-gray-200"
-                  }`}
+                  ? "font-bold text-pink-500" : "text-gray-200"}`}
               >
                 {link.name}
               </Link>
