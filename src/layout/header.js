@@ -67,7 +67,6 @@ const Header = () => {
     return () => sections.forEach((s) => observer.unobserve(s));
   }, [router.pathname]);
 
-
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") setIsDrawerOpen(false);

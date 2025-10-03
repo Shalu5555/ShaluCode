@@ -96,6 +96,27 @@ export const PROJECTS = [
     source_code_link: "https://strategysoda.com",
   },
   {
+    name: "KiWi-Kisan Window",
+    description:
+      "Kiwi has always stood for a better tomorrow–one where humanity thrives. who you are or where you live, you feel physically safe, mentally healthy.",
+    tags: [
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "NextJS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "/assets/projects/kiwi.webp",
+    source_code_link: "https://kiwikisanwindow.com/",
+  },
+  {
     name: "Soulbites",
     description:
       "Web application e-commerce that Build the brand from scratch, including strategy, logo, packaging, and e-commerce presence. Position Soulbites as a premium, wellness-first dry fruit brand grounded in tradition, care, and sustainability.",
@@ -293,5 +314,22 @@ export const PROJECTS = [
     ],
     image: "/assets/projects/krologix.png",
     source_code_link: "https://krologix.com/",
+  },
+  {
+    name: "Woof",
+    description:
+      "Woof- My Best Buddy, is a One-stop solution to all your pet needs. Being India’s largest Pet community, we provide Door to door grooming.",
+    tags: [
+      {
+        name: "ReactJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React Native",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: "/assets/projects/woof.webp",
+    source_code_link: "https://www.woofindia.in/",
   },
 ];
