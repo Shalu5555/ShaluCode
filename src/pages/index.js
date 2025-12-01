@@ -1,3 +1,4 @@
+import RotatingCube from "@/components/RotatingCube";
 import dynamic from "next/dynamic";
 
 const Seo = dynamic(() => import("@/layout/seo"));
@@ -16,6 +17,7 @@ export default function Home() {
         keywords="Shalu Gole, Portfolio, Frontend Developer, React, Next.js"
         image="/og-home.png"
       />
+      {/* <RotatingCube /> */}
       <Hero />
       <About />
       <WorkExp />
