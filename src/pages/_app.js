@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }) {
         <Cursor />
         <Header />
         <Component {...pageProps} />
-        <DownloadCVButton />
+        {/* <DownloadCVButton /> */}
       </ThemeProvider>
     </>
   );

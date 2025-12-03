@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaHeart, FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { DARK, LINKS } from "@/utils/const";
 import { TbFileCv } from "react-icons/tb";
@@ -183,6 +183,52 @@ export default function ContactSection() {
           </motion.a>
 
           <motion.a
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold shadow-lg overflow-hidden ${isDark
+                ? "bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 text-white"
+                : "bg-gradient-to-br from-blue-700 via-indigo-700 to-sky-900 text-white"
+              }`}
+            animate={{
+              y: [0, -5, 5, -5, 5, 0],
+              scale: [1, 1.03, 1],
+            }}
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatDelay: 2,
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.2 }}
+          >
+            <span className="z-10">Visit My LinkedIn</span>
+            <FaLinkedinIn className="z-10" size={28} />
+
+            {[...Array(5)].map((_, i) => {
+              const top = Math.random() * 80 + "%";
+              const left = Math.random() * 80 + "%";
+              const size = Math.random() * 4 + 2;
+              const delay = Math.random() * 2;
+              return (
+                <motion.span
+                  key={i}
+                  className="absolute rounded-full bg-white/90"
+                  style={{ width: size, height: size, top, left }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: [0, 1, 0], scale: [0, 1, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1,
+                    delay,
+                    ease: "easeInOut",
+                  }}
+                />
+              );
+            })}
+          </motion.a>
+
+          {/* <motion.a
             href="/ShaluGole_CV.pdf"
             target="_blank"
             className={`relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold shadow-lg overflow-hidden ${isDark
@@ -224,7 +270,7 @@ export default function ContactSection() {
                 />
               );
             })}
-          </motion.a>
+          </motion.a> */}
         </motion.div>
 
         <motion.p
@@ -247,7 +293,7 @@ export default function ContactSection() {
                   transform: "translateX(-50%)",
                 }}
               >
-               ❤️
+                ❤️
                 {/* <FaHeart className="text-red-500" /> */}
               </motion.span>
             ))}
