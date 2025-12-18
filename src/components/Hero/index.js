@@ -19,7 +19,6 @@ const letterVariants = {
   hover: { scale: 1.3, rotate: -5, color: "#fbbf24" },
 };
 
-
 const SOCIAL_LINKS = [
   {
     href: LINKS.GITLAB,

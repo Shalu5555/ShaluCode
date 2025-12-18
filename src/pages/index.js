@@ -1,12 +1,12 @@
-import RotatingCube from "@/components/RotatingCube";
+
 import dynamic from "next/dynamic";
 
 const Seo = dynamic(() => import("@/layout/seo"));
-const About = dynamic(() => import("@/components/About"));
-const Contact = dynamic(() => import("@/components/Contact"));
 const Hero = dynamic(() => import("@/components/Hero"));
-const Skills = dynamic(() => import("@/components/Skills"));
+const About = dynamic(() => import("@/components/About"));
 const WorkExp = dynamic(() => import("@/components/WorkExp"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
   return (

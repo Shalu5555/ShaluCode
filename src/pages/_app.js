@@ -25,6 +25,20 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events]);
 
+  useEffect(() => {
+    if (!router.isReady) return;
+
+    const { utm_source, utm_medium, utm_campaign } = router.query;
+
+    if (utm_source || utm_medium || utm_campaign) {
+      window.gtag("event", "utm_visit", {
+        utm_source,
+        utm_medium,
+        utm_campaign,
+      });
+    }
+  }, [router.isReady, router.query]);
+
   return (
     <>
       {/* Google tag (gtag.js) */}
