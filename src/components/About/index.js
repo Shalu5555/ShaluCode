@@ -149,7 +149,7 @@ export default function AboutMe() {
           transition={{ duration: star.duration, repeat: Infinity }}
         />
       ))}
-         <div
+      <div
         id="global-pencil-container"
         className="fixed top-0 left-0 w-full h-full pointer-events-none z-50"
       />
@@ -211,6 +211,10 @@ const ProfileCard = React.forwardRef(({ triggerIconAnimation }, ref) => {
         <li>React Native & cross-platform mobile UIs</li>
         <li>Performance optimization & SEO-minded builds</li>
         <li>Component-driven architecture & design systems</li>
+        <li>REST API Integration</li>
+        <li>React Native (Cross-platform apps)</li>
+        <li>Performance Optimization & SEO</li>
+        <li>AI-assisted development workflow</li>
       </ul>
     </div>
   );
@@ -295,10 +299,13 @@ const HighlightsCard = React.forwardRef(({ triggerIconAnimation }, ref) => {
     >
       <h4 className="font-bold text-lg mb-3">🌟 Highlights</h4>
       <ul className=" text-xs lg:text-sm text-white/85 list-disc ml-5 space-y-2">
-        <li>Led frontend at Raguested Infotech (UK) — web & mobile projects</li>
-        <li>Built production Fintech Payment Portal (secure APIs + UI)</li>
-        <li>Optimized code & UI for ~40% performance gains</li>
-        <li>Delivered multiple live apps: Jus TV, TopTen Electronics, Jus Radio, and more</li>
+
+        <li>Led frontend development for scalable web and mobile applications</li>
+        <li>Built and deployed fintech and e-commerce platforms with secure API integrations</li>
+        <li>Improved application performance by up to 40% through optimization techniques</li>
+        <li>Delivered multiple live projects including Jus TV, TopTen Electronics, and more</li>
+        <li>Integrated third-party services like payment gateways and external APIs</li>
+        <li>Mentored junior developers and contributed to team productivity</li>
       </ul>
     </div>
   );

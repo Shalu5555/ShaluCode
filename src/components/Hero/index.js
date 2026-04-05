@@ -121,7 +121,9 @@ export default function Hero() {
           </motion.h2>
 
           <div className="max-w-xl text-base sm:text-lg font-medium text-white/90 z-10 flex flex-wrap">
-            {"Passionate about building beautiful, user-friendly interfaces and bringing designs to life with clean, scalable code. I thrive on crafting modern web experiences that connect with users."
+            Passionate about creating beautiful, intuitive, and user-friendly interfaces that bring designs to life with clean, scalable code. I specialize in vibe coding and SEO implementation to build fast, accessible, and high-performing web experiences. Leveraging AI tools like ChatGPT, Claude AI, and GitHub Copilot, I enhance development efficiency and deliver innovative solutions that truly connect with users.
+            {/* {"Passionate about building beautiful, user-friendly interfaces and bringing designs to life with clean, scalable code. I thrive on crafting modern web experiences that connect with users." */}
+            {/* {"Passionate about creating beautiful, intuitive, and user-friendly interfaces that bring designs to life with clean, scalable code. I specialize in vibe coding and SEO implementation to build fast, accessible, and high-performing web experiences. Leveraging AI tools like ChatGPT, Claude AI, and GitHub Copilot, I enhance development efficiency and deliver innovative solutions that truly connect with users."
               .split("")
               .map((char, i) => (
                 <motion.span
@@ -135,7 +137,7 @@ export default function Hero() {
                 >
                   {char}
                 </motion.span>
-              ))}
+              ))} */}
           </div>
 
           <motion.div

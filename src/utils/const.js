@@ -8,7 +8,7 @@ export const LINKS = {
   GITHUB: "",
   GITLAB: "https://gitlab.com/shalugole",
   EMAIL: "mailto:shalugole369@gmail.com",
-  LINKEDIN: "https://www.linkedin.com/in/shalugole369",
+  LINKEDIN: "https://www.linkedin.com/in/shalugole369/",
 
 };
 
@@ -21,15 +21,29 @@ export const EXPERIENCES = [
     desc: "Started my journey with HTML, CSS, JavaScript. Learned basics of React and responsive design.",
     icon: "/assets/company/raysteeds.webp",
     // icon: <FaBriefcase />,
+    // points: [
+    //   "Lead frontend development of scalable web and mobile applications using React, Next.js, and React Native.",
+    //   "Built and deployed live iOS & Android applications with smooth cross-platform performance.",
+    //   "Engineered and modern web applications integrated with Node.js, REST APIs, and third-party services.",
+    //   "Spearheaded UI/UX revamps, boosting user engagement and accessibility.",
+    //   "Integrated secure payment gateways (Google Pay, etc.) into fintech solutions.",
+    //   "Optimized codebase and app performance, reducing load times by 40%.",
+    //   "Mentored junior developers and lead a team for API-driven projects.",
+    // ],
     points: [
-      "Lead frontend development of scalable web and mobile applications using React, Next.js, and React Native.",
-      "Built and deployed live iOS & Android applications with smooth cross-platform performance.",
-      "Engineered and modern web applications integrated with Node.js, REST APIs, and third-party services.",
-      "Spearheaded UI/UX revamps, boosting user engagement and accessibility.",
-      "Integrated secure payment gateways (Google Pay, etc.) into fintech solutions.",
-      "Optimized codebase and app performance, reducing load times by 40%.",
-      "Mentored junior developers and lead a team for API-driven projects.",
-    ],
+      "Architected scalable frontend systems using React, Next.js, and React Native with modular and reusable component design.",
+      "Designed and implemented end-to-end user flows across web and mobile platforms, ensuring seamless cross-platform UX consistency.",
+      "Led performance optimization initiatives including lazy loading, code splitting, and caching strategies, improving app speed by 40%+.",
+      "Developed real-time and API-driven applications using Node.js, WebSockets, and REST APIs.",
+      "Implemented secure and scalable payment integrations (Google Pay, Razorpay, Stripe) with robust error handling and transaction flows.",
+      "Collaborated closely with backend, product, and design teams in Agile sprints to deliver production-ready features at scale.",
+      "Established clean architecture practices, improving maintainability and reducing technical debt across projects.",
+      "Mentored junior developers, conducted code reviews, and enforced best practices for scalable frontend development.",
+      "Built and deployed production-grade iOS and Android apps with optimized performance and minimal crash rates.",
+      "Integrated AI-powered development workflows using ChatGPT, Claude, and GitHub Copilot to accelerate delivery and improve code quality.",
+      "Implemented advanced UI/UX patterns including animations (Framer Motion), responsive systems, and accessibility standards (WCAG).",
+      "Contributed to CI/CD pipelines and automated deployment processes for faster and reliable releases.",
+    ]
   },
   {
     year: "Sept 2022 - July 2023",

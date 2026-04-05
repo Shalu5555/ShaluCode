@@ -6,6 +6,7 @@ import { DARK, LINKS } from "@/utils/const";
 import { TbFileCv } from "react-icons/tb";
 import { MdOutlineAlternateEmail } from "react-icons/md"
 import { useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const SOCIAL_LINKS = [
   {
@@ -94,7 +95,19 @@ export default function ContactSection() {
           transition={{ duration: 0.8 }}
           className="text-2xl sm:text-5xl font-extrabold leading-tight"
         >
-          Let's build something beautiful ✨
+          {/* Let's build something beautiful ✨ */}
+          Let's build something {" "}
+
+          <Typewriter
+            words={["beautiful ✨", "Amazing ✨", "Impactful ✨", "Unforgettable ✨"]}
+            loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+          />
+
         </motion.h2>
 
         <motion.p
@@ -103,7 +116,9 @@ export default function ContactSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-4 max-w-2xl mx-auto"
         >
-          Have a project, collaboration, or just want to say hi? Reach out via email or connect on socials.
+          {/* Have a project, collaboration, or just want to say hi? Reach out via email or connect on socials. */}
+          I’m always open to discussing new projects, creative ideas, or collaboration opportunities.
+          Feel free to reach out — I’d love to connect and create something meaningful together.
         </motion.p>
 
         <motion.div
@@ -183,12 +198,12 @@ export default function ContactSection() {
           </motion.a>
 
           <motion.a
-            href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+            href={LINKS.LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
             className={`relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold shadow-lg overflow-hidden ${isDark
-                ? "bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 text-white"
-                : "bg-gradient-to-br from-blue-700 via-indigo-700 to-sky-900 text-white"
+              ? "bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 text-white"
+              : "bg-gradient-to-br from-blue-700 via-indigo-700 to-sky-900 text-white"
               }`}
             animate={{
               y: [0, -5, 5, -5, 5, 0],
@@ -202,7 +217,7 @@ export default function ContactSection() {
             }}
             whileHover={{ scale: 1.2 }}
           >
-            <span className="z-10">Visit My LinkedIn</span>
+            <span className="z-10">Connect On LinkedIn</span>
             <FaLinkedinIn className="z-10" size={28} />
 
             {[...Array(5)].map((_, i) => {
@@ -279,7 +294,7 @@ export default function ContactSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="pt-8 text-sm text-center flex items-center "
         >
-          © Copyright 2023-2025 Shalu
+          © Copyright 2023-2026 Shalu Gole
           <span onMouseEnter={handleHover} className="relative inline-block text-red-500 text-2xl hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer z-10 ">
             ❤️{hearts.map((heart) => (
               <motion.span
