@@ -23,7 +23,8 @@ export default function DownloadCVButton() {
         transition={{ duration: 0.8, delay: 1 }}
       >
         <motion.a
-          href="/assets/cv/ShaluGole_CV.pdf"
+          // href="/assets/cv/ShaluGole_CV.pdf"
+          href="https://drive.google.com/file/d/1lkW-7TEYE5dd6G_raNE_MXmyqr2iLI7p/view"
           target="_blank"
           download
           className={`text-xs lg:text-base group transition-all duration-300 ease-in-out relative inline-flex items-center gap-1 px-3 lg:px-5 py-3 rounded-full font-bold text-white shadow-lg bg-gradient-to-r ${gradient} overflow-hidden`}
@@ -42,7 +43,9 @@ export default function DownloadCVButton() {
             ease: "easeInOut",
           }}
         >
-          <FiArrowDown className=" text-base lg:text-xl" /> Download My CV{" "}
+          {/* <FiArrowDown className=" text-base lg:text-xl" /> Download My CV{" "} */}
+          {/* <FiArrowDown className=" text-base lg:text-xl" />  */}
+          Peek My CV{" "}
           <span className="group-hover:hidden block">🙂</span>
           <span className="group-hover:block hidden">😃</span>
 

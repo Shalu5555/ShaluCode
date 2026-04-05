@@ -102,7 +102,7 @@ export default function WorkExp() {
               whileInView={{ opacity: 1, x: 0, rotate: 0 }}
               transition={{ duration: 1, type: "spring" }}
               viewport={{ once: true }}
-              className={`relative w-full md:w-1/2 px-6 ${index % 2 === 0 ? "ml-auto text-left" : "mr-auto text-right"
+              className={`relative w-full md:w-1/2 px-5 ${index % 2 === 0 ? "ml-auto text-left" : "mr-auto text-right"
                 }`}
             >
               <motion.div
@@ -115,11 +115,11 @@ export default function WorkExp() {
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-2 pt-6 lg:p-8 shadow-xl border border-white/20 relative"
               >
                 <div className="flex items-center gap-2 mb-2">
-                    <img
-                      src={exp.icon}
-                      alt="tech-logo"
-                      className="w-8 h-8 lg:w-14 lg:h-14 object-contain"
-                    />
+                  <img
+                    src={exp.icon}
+                    alt="tech-logo"
+                    className="w-8 h-8 lg:w-14 lg:h-14 object-contain"
+                  />
                   <h3 className=" text-base lg:text-2xl font-semibold">{exp.role}</h3>
                 </div>
                 <Link href={exp.company_url} target="_blank" className="text-pink-300 text-xs lg:text-base font-medium">{exp.company}</Link>

@@ -58,7 +58,7 @@ const Girl = () => {
         return () => clearInterval(interval);
     }, []);
 
-   // Show bubble when mouth opens
+    // Show bubble when mouth opens
     useEffect(() => {
         if (mouthOpen) {
             setShowBubble(true);
@@ -356,11 +356,11 @@ const Girl = () => {
                 </g>
             </svg>
 
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {showBubble && (
                     <Bubble key={activeMsg} text={messages[activeMsg]} />
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </>
     )
 }
