@@ -54,6 +54,11 @@ export default function AllProjects() {
   const [hovered, setHovered] = useState(null);
   const sectionRef = useRef(null);
   const isDark = resolvedTheme === "dark";
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section
@@ -157,7 +162,7 @@ export default function AllProjects() {
                 >
                   Visit Project <FaExternalLinkAlt size={14}  />
 
-                  {[...Array(4)].map((_, i) => {
+                  {mounted && [...Array(4)].map((_, i) => {
                     const top = Math.random() * 80 + "%";
                     const left = Math.random() * 80 + "%";
                     const size = Math.random() * 3 + 2;

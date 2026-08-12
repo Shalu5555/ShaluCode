@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { DARK, LINKS } from "@/utils/const";
 import { TbFileCv } from "react-icons/tb";
 import { MdOutlineAlternateEmail } from "react-icons/md"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 const SOCIAL_LINKS = [
@@ -35,6 +35,11 @@ export default function ContactSection() {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === DARK;
   const [hearts, setHearts] = useState([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleHover = () => {
     const newHearts = Array.from({ length: 6 }).map((_, i) => ({
@@ -174,7 +179,7 @@ export default function ContactSection() {
           >
             <MdOutlineAlternateEmail size={28} className="z-10" /> Pop Me to Email
 
-            {[...Array(5)].map((_, i) => {
+            {mounted && [...Array(5)].map((_, i) => {
               const top = Math.random() * 80 + "%";
               const left = Math.random() * 80 + "%";
               const size = Math.random() * 4 + 2;
@@ -220,7 +225,7 @@ export default function ContactSection() {
             <span className="z-10">Connect On LinkedIn</span>
             <FaLinkedinIn className="z-10" size={28} />
 
-            {[...Array(5)].map((_, i) => {
+            {mounted && [...Array(5)].map((_, i) => {
               const top = Math.random() * 80 + "%";
               const left = Math.random() * 80 + "%";
               const size = Math.random() * 4 + 2;
@@ -317,7 +322,7 @@ export default function ContactSection() {
       </div>
 
       <div className="absolute inset-0 z-4 pointer-events-none">
-        {[...Array(20)].map((_, i) => {
+        {mounted && [...Array(20)].map((_, i) => {
           const left = Math.random() * 100;
           const delay = Math.random() * 2;
           const size = 8 + Math.random() * 24;

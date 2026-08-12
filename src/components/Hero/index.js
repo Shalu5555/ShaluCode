@@ -46,8 +46,10 @@ export default function Hero() {
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === DARK;
   const [stars, setStars] = useState([]);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const generatedStars = [...Array(50)].map(() => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -172,7 +174,7 @@ export default function Hero() {
             >
               View My Work
 
-              {[...Array(5)].map((_, i) => {
+              {mounted && [...Array(5)].map((_, i) => {
                 const top = Math.random() * 80 + "%";
                 const left = Math.random() * 80 + "%";
                 const size = Math.random() * 4 + 2;

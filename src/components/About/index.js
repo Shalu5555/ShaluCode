@@ -185,7 +185,13 @@ const ProfileCard = React.forwardRef(({ triggerIconAnimation }, ref) => {
     <div
       ref={(el) => {
         localRef.current = el;
-        if (ref) ref.current = el;
+        if (ref) {
+          if (typeof ref === "function") {
+            ref(el);
+          } else {
+            ref.current = el;
+          }
+        }
       }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
@@ -248,7 +254,13 @@ const EducationCard = React.forwardRef(({ triggerIconAnimation }, ref) => {
     <div
       ref={(el) => {
         localRef.current = el;
-        if (ref) ref.current = el;
+        if (ref) {
+          if (typeof ref === "function") {
+            ref(el);
+          } else {
+            ref.current = el;
+          }
+        }
       }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
@@ -291,7 +303,13 @@ const HighlightsCard = React.forwardRef(({ triggerIconAnimation }, ref) => {
     <div
       ref={(el) => {
         localRef.current = el;
-        if (ref) ref.current = el;
+        if (ref) {
+          if (typeof ref === "function") {
+            ref(el);
+          } else {
+            ref.current = el;
+          }
+        }
       }}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
